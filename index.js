@@ -27,7 +27,7 @@ app.get("/api/",function (req, res) {
   cur_date = Date.now();
   date = new Date (cur_date)
   utcString = date.toUTCString();
-  res.json({'unix': date , 'utc': utcString})
+  res.json({'unix': cur_date , 'utc': utcString})
 });
 
 app.get('/api/:date', function(req, res) {
